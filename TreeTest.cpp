@@ -55,6 +55,10 @@ int main() {
 		.CHECK_EQUAL(myTreeTest.size(), 9)
 		.CHECK_EQUAL(myTreeTest.root(), 76)
 		.CHECK_EQUAL(myTreeTest.contains(50), false)
+		.CHECK_THROWS(myTreeTest.remove(50))
+		.CHECK_THROWS(myTreeTest.parent(76))
+		.CHECK_OK(myTreeTest.insert(8))
+		.CHECK_EQUAL(myTreeTest.size(), 10)
 		.print();
 		    
 
