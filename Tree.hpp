@@ -19,7 +19,7 @@ namespace ariel {
 		bool containsNode(int i, node* n);
 		int treeSize(node* n);
 		int findParent(int i, node* n);
-		void deleteTree(node* n);
+		void deleteTreePrivate(node* n);
 	
 	
 
@@ -37,7 +37,7 @@ namespace ariel {
 		int parent(int i);
 		int left(int i);
 		int right(int i);
-		void delete();
+		void deleteTree();
 
 
 	};

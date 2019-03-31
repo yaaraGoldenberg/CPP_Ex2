@@ -309,14 +309,14 @@ void Tree::removeMatch(node* parent, node* match, bool left) {
 		throw std::invalid_argument("The tree is empty\n");
 	}
 }
-void Tree::delete(){
-deleteTree(Root);
+void Tree::deleteTree(){
+deleteTreePrivate(Root);
 }
 
-void Tree::deleteTree(node* n){
+void Tree::deleteTreePrivate(node* n){
 if(n != NULL){
-	deleteTree(n->right);
-	deleteTree(n->left);
+	deleteTreePrivate(n->right);
+	deleteTreePrivate(n->left);
 	free(n);
 }
 return;
