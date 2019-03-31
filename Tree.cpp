@@ -317,7 +317,7 @@ void Tree::deleteTreePrivate(node* n){
 if(n != NULL){
 	deleteTreePrivate(n->right);
 	deleteTreePrivate(n->left);
-	free(n);
+	delete(n);
 }
 return;
 }
