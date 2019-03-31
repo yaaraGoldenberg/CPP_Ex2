@@ -212,6 +212,7 @@ int Tree::left(int i) {
 	node* n = returnNode(i);
 	if (n != NULL) {
 		if (n->left == NULL) {
+		throw std::invalid_argument("The data is not in the tree\n");
 			return -1;
 		}
 		else {
@@ -228,6 +229,7 @@ int Tree::right(int i) {
 	node* n = returnNode(i);
 	if (n != NULL) {
 		if (n->right == NULL) {
+		throw std::invalid_argument("The data is not in the tree\n");
 			return -1;
 		}
 		else {
