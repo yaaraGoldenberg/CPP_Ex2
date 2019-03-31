@@ -168,7 +168,7 @@ void Tree::removeNode(int i, node* parent) {
 
 int Tree::root() {
 	if (Root == NULL) {
-		return -1;
+		throw std::invalid_argument("The tree is empty\n");
 	}
 	else {
 		return Root->key;
