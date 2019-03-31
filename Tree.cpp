@@ -9,7 +9,6 @@ Tree::Tree() {
 	Root = NULL;
 }
 
-
 Tree::node* Tree::createLeaf(int i) {
 	node* n = new node;
 	n->key = i;
@@ -310,7 +309,18 @@ void Tree::removeMatch(node* parent, node* match, bool left) {
 		throw std::invalid_argument("The tree is empty\n");
 	}
 }
+void Tree::delete(){
+deleteTree(Root);
+}
 
+void Tree::deleteTree(node* n){
+if(n != NULL){
+	deleteTree(n->right);
+	deleteTree(n->left);
+	free(n);
+}
+return;
+}
 
 
 
